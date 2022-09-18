@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+$color-primary: #0d0259;
+$color-text: #fff;
+$color-dark: #000;
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $color-text;
+    font-family: 'Poppins', sans-serif;
+}
+
+.init{
+    width: 100%;
+    color:$color-text;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgb(19, 19, 19);
+}
+
+.navbar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: $color-primary;
+    justify-content: space-between;
+
+    .img-navbar img{
+        display: flex;
+        align-items: center;
+        width: 5em;
+        border-radius: 0.5rem;
+    }
+
+    .itens-navbar ul{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        cursor: pointer;
+    }
+
+    .itens-navbar a{
+        text-decoration: none;
+        color: $color-text;
+        border-radius: 0.1rem;
+        transition: 0.5s linear;
+        font-weight: bold;
+    }
+    
+    .itens-navbar a:hover{
+        transition: 0.5s;
+        border-bottom: 1px solid $color-text;
+    }
+}
+
+.container-one{
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   background-image: url('/assets/images/background-One.jpg');
+   background-size: 100%;
+   background-position: top center;
+   color: #fff;
+ 
+
+   .one-information h1{
+        font-size: 2rem;
+        border-bottom: 0.1rem solid #444;
+        cursor: pointer;
+   }
+
+   aside{
+    padding-top: 10rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .one-text{
+        padding: 2rem;
+        background: rgba(224, 224, 224, 0.822);
+        opacity: 80%;
+        font-weight: bold;
+        color: $color-dark;
+        box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(233, 233, 233, 0.363);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.2s linear;
+   }
+
+   .one-text:hover{
+    transition: 0.2s linear;
+    transform: scale(1.2);
+   }
+}
