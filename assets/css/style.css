@@ -19,20 +19,21 @@ body {
   width: 100%;
   color: #fff;
   text-align: center;
-  box-shadow: 0.1rem 0.1rem 0.5rem rgb(19, 19, 19);
 }
 
 .navbar {
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   cursor: pointer;
   position: fixed;
+  z-index: 2;
+  background: #201180;
   left: 0;
   top: 0;
   right: 0;
-  background: #0d0259;
   justify-content: space-between;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgb(0, 0, 0);
 }
 .navbar .img-navbar img {
   display: flex;
@@ -49,6 +50,7 @@ body {
 .navbar .itens-navbar a {
   text-decoration: none;
   color: #fff;
+  margin-left: 0.5rem;
   border-radius: 0.1rem;
   transition: 0.5s linear;
   font-weight: bold;
@@ -57,42 +59,79 @@ body {
   transition: 0.5s;
   border-bottom: 1px solid #fff;
 }
+.navbar .mobile-menu div {
+  display: none;
+  height: 2px;
+  margin: 8px;
+  width: 30px;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .navbar .mobile-menu div {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar .itens-navbar ul {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: #201180;
+  }
+  .navbar .active {
+    display: none;
+  }
+}
 
 .container-one {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  background-image: url("/assets/images/background-One.jpg");
-  background-size: 100%;
-  background-position: top center;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
   color: #fff;
-}
-.container-one .one-information h1 {
-  font-size: 2rem;
-  border-bottom: 0.1rem solid #444;
-  cursor: pointer;
+  background-image: url("/assets/images/sobre.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  justify-content: center;
 }
 .container-one aside {
-  padding-top: 10rem;
+  margin-top: 5em;
+  padding: 3rem;
   display: flex;
-  gap: 2rem;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1.5rem;
+}
+.container-one .one-information h1 {
+  font-size: 2rem;
+  color: rgb(12, 12, 12);
+  border-bottom: 1px solid rgb(66, 66, 66);
+  border-radius: 0.1rem;
+  display: flex;
+  justify-content: center;
 }
 .container-one .one-text {
-  padding: 2rem;
-  background: rgba(224, 224, 224, 0.822);
-  opacity: 80%;
+  margin: 1rem;
+  display: flex;
+  background: #eee;
+  padding: 1.5rem;
   font-weight: bold;
   color: #000;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(233, 233, 233, 0.363);
   border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(238, 238, 238, 0.527);
+  opacity: 50%;
   cursor: pointer;
-  transition: 0.2s linear;
+  transition: 0.3s all;
 }
 .container-one .one-text:hover {
-  transition: 0.2s linear;
+  transition: 0.3s all;
   transform: scale(1.2);
 }
 

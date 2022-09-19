@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +5,11 @@
     box-sizing: border-box;
 }
 
-$color-primary: #0d0259;
+$color-primary: #201180;
 $color-text: #fff;
 $color-dark: #000;
+$color-transparent: rgba(253, 253, 253, 0);
+
 
 html{
     overflow-x: hidden;
@@ -24,20 +25,21 @@ body{
     width: 100%;
     color:$color-text;
     text-align: center;
-    box-shadow: 0.1rem 0.1rem 0.5rem rgb(19, 19, 19);
 }
 
 .navbar{
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
     position: fixed;
+    z-index: 2;
+    background: $color-primary;
     left: 0;
     top: 0;
     right: 0;
-    background: $color-primary;
     justify-content: space-between;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgb(0, 0, 0);
 
     .img-navbar img{
         display: flex;
@@ -56,6 +58,7 @@ body{
     .itens-navbar a{
         text-decoration: none;
         color: $color-text;
+        margin-left: 0.5rem;
         border-radius: 0.1rem;
         transition: 0.5s linear;
         font-weight: bold;
@@ -65,47 +68,92 @@ body{
         transition: 0.5s;
         border-bottom: 1px solid $color-text;
     }
+
+    .mobile-menu div{ 
+        display: none;
+        height: 2px;
+        margin: 8px;
+        width: 30px;
+        background: #fff;
+    
 }
 
-.container-one{
-   width: 100%;
-   height: 100vh;
-   text-align: center;
-   background-image: url('assets/images/background-One.jpg');
-   background-size: 100%;
-   background-position: top center;
-   color: #fff;
  
+@media(max-width: 768px){
+    .mobile-menu div{
+        display: flex;
+        justify-content: flex-end;
+    }
 
-   .one-information h1{
-        font-size: 2rem;
-        border-bottom: 0.1rem solid #444;
-        cursor: pointer;
-   }
+    .itens-navbar ul{
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: 15vh;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background : $color-primary;
+    }
 
-   aside{
-    padding-top: 10rem;
+    .active{
+        display: none;
+    }
+}
+
+}
+
+
+
+.container-one{
+    max-width: 100%;
+    min-height: 100vh;
     display: flex;
-    gap: 2rem;
+    color: #fff;
+    background-image: url('/assets/images/sobre.jpg');
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   }
 
-   .one-text{
-        padding: 2rem;
-        background: rgba(224, 224, 224, 0.822);
-        opacity: 80%;
+    aside{
+        margin-top: 5em;
+        padding: 3rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .one-information h1{
+        font-size: 2rem;
+        color: rgb(12, 12, 12);
+        border-bottom: 1px solid  rgb(66, 66, 66);
+        border-radius: 0.1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .one-text{
+        margin: 1rem;
+        display: flex;
+        background: #eee;
+        padding: 1.5rem;
         font-weight: bold;
         color: $color-dark;
-        box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(233, 233, 233, 0.363);
         border-radius: 0.5rem;
+        box-shadow: 0.2rem 0.2rem 0.5rem rgba(238, 238, 238, 0.527);
+        opacity: 50%;
         cursor: pointer;
-        transition: 0.2s linear;
-   }
+        transition: 0.3s all;
+    }
 
-   .one-text:hover{
-    transition: 0.2s linear;
-    transform: scale(1.2);
-   }
+    .one-text:hover{
+        transition: 0.3s all;
+        transform: scale(1.2);
+    }
 }
