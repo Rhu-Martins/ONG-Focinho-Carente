@@ -71,21 +71,21 @@ body {
     display: flex;
     justify-content: flex-end;
   }
-  .navbar .itens-navbar ul {
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 16vh;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background: #201180;
-  }
-  .navbar .active {
-    display: none;
-  }
+}
+.navbar .itens-navbar ul {
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: #201180;
+}
+.navbar .active {
+  display: none;
 }
 
 .container-one {
@@ -93,7 +93,7 @@ body {
   min-height: 100vh;
   display: flex;
   color: #fff;
-  background-image: url("assets/images/sobre.jpg");
+  background-image: url("/assets/images/sobre.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -133,6 +133,104 @@ body {
 .container-one .one-text:hover {
   transition: 0.3s all;
   transform: scale(1.2);
+}
+
+.slider {
+  background: rgba(248, 182, 0, 0.712);
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.slider .slider-images {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  font-weight: bold;
+}
+.slider .slider-images .slider-images img {
+  border-radius: 0.5rem 0rem 0.5rem 0rem;
+  width: 100%;
+}
+
+.services {
+  margin-top: 1rem;
+  display: flex;
+  padding: 1em;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services .services h3 {
+  border-bottom: 1px solid #444;
+}
+.services .cards {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.location {
+  margin: 0 auto;
+  background: rgba(248, 182, 0, 0.712);
+  color: #444;
+  width: 100%;
+  display: flex;
+}
+.location .map {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.location .map h3 {
+  font-size: 1.5rem;
+}
+
+.form-voluntary {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-voluntary .form-confirm {
+  width: 100%;
+  text-align: center;
+}
+.form-voluntary .form-confirm button {
+  width: 100%;
+  background: #201180;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    max-width: 100%;
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .slider-images img {
+    max-width: 100%;
+  }
+  .form-voluntary {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
