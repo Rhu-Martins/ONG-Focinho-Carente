@@ -30,6 +30,7 @@ body{
 .navbar{
     padding: 0.5rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     position: fixed;
@@ -51,11 +52,14 @@ body{
     .itens-navbar ul{
         list-style: none;
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
         cursor: pointer;
     }
 
     .itens-navbar a{
+        padding: 0.5rem;
         text-decoration: none;
         color: $color-text;
         margin-left: 0.5rem;
@@ -83,7 +87,7 @@ body{
     .mobile-menu div{
         display: flex;
         justify-content: flex-end;
-    }}
+    }
 
     .itens-navbar ul{
         width: 100%;
@@ -103,7 +107,7 @@ body{
     }
 }
 
-
+}
 
 .container-one{
     max-width: 100%;
@@ -181,7 +185,7 @@ body{
             width: 100%;
         }
 
-    }
+}
 }
 
 .services{
@@ -220,7 +224,7 @@ body{
         padding: 2rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 4rem;
         justify-content: center;
         align-items: center;
     }
@@ -247,21 +251,5 @@ body{
         width: 100%;
         background: #201180;
         padding: 0.5rem;
-    }
-}
-
-
-@media(max-width: 768px){
-    .slider{
-        max-width: 100%;
-        padding: 2rem;
-        flex-direction: column;
-    }
-
-    .slider-images img{
-        max-width: 100%;
-    }
-    .form-voluntary{
-        text-align: center;
     }
 }

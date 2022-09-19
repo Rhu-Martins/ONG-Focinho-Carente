@@ -24,6 +24,7 @@ body {
 .navbar {
   padding: 0.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
   position: fixed;
@@ -44,10 +45,13 @@ body {
 .navbar .itens-navbar ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   cursor: pointer;
 }
 .navbar .itens-navbar a {
+  padding: 0.5rem;
   text-decoration: none;
   color: #fff;
   margin-left: 0.5rem;
@@ -71,21 +75,21 @@ body {
     display: flex;
     justify-content: flex-end;
   }
-}
-.navbar .itens-navbar ul {
-  width: 100%;
-  flex-direction: column;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 15vh;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: #201180;
-}
-.navbar .active {
-  display: none;
+  .navbar .itens-navbar ul {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: #201180;
+  }
+  .navbar .active {
+    display: none;
+  }
 }
 
 .container-one {
@@ -193,7 +197,7 @@ body {
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
 }
@@ -217,20 +221,6 @@ body {
   width: 100%;
   background: #201180;
   padding: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .slider {
-    max-width: 100%;
-    padding: 2rem;
-    flex-direction: column;
-  }
-  .slider-images img {
-    max-width: 100%;
-  }
-  .form-voluntary {
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
